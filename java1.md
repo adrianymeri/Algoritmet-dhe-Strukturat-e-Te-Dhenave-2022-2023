@@ -239,6 +239,8 @@ Thirrjet `p1.shtyp_infot()` dhe `p2.shtyp_infot()` japin rezultate të ndryshme
 pasi që ekzekutohen në kontekste të ndryshme.
 
 ---
+**Klasa Filmi:**
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -280,4 +282,33 @@ int main() {
     return 0;
 }
 
+```
+---
+**Klasa Studenti:**
+```cpp
+#include <iostream>  
+using namespace std;  
+class Student {  
+   public:  
+       int id;    
+       string name;  
+       void insert(int i, string n)    
+        {    
+            id = i;    
+            name = n;    
+        }    
+       void display()    
+        {    
+            cout<<id<<"  "<<name<<endl;    
+        }    
+};  
+int main(void) {  
+    Student s1; //krijimi i nje objekti te klases Student   
+    Student s2; //krijimi i nje objekti te klases Student    
+    s1.insert(201, "Filan");    
+    s2.insert(202, "Filane");    
+    s1.display();    
+    s2.display();  
+    return 0;  
+}  
 ```
