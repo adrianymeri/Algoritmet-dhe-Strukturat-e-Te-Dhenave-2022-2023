@@ -312,3 +312,120 @@ int main(void) {
     return 0;  
 }  
 ```
+---
+**Klasa Punetori:**
+```cpp
+#include <iostream>  
+using namespace std;  
+class Employee {  
+   public:  
+       int id;    
+       string name;  
+       float salary;  
+       void insert(int i, string n, float s)    
+        {    
+            id = i;    
+            name = n;    
+            salary = s;  
+        }    
+       void display()    
+        {    
+            cout<<id<<"  "<<name<<"  "<<salary<<endl;    
+        }    
+};  
+int main(void) {  
+    Employee e1; 
+    Employee e2;  
+    e1.insert(201, "Filan",990000);    
+    e2.insert(202, "Filane", 29000);    
+    e1.display();    
+    e2.display();    
+    return 0;  
+}
+```
+---
+**Shembull shtese - 1:**
+```cpp
+#include <iostream>
+using namespace std;
+
+// Krijo klasen
+class Room {
+
+   public:
+    double length;
+    double breadth;
+    double height;
+
+    double calculateArea() {
+        return length * breadth;
+    }
+
+    double calculateVolume() {
+        return length * breadth * height;
+    }
+};
+
+int main() {
+
+    // create objektin e klases Room
+    Room room1;
+
+    // Jep vlera anetareve te klases
+    room1.length = 42.5;
+    room1.breadth = 30.8;
+    room1.height = 19.2;
+
+    // Kalkulo dhe shfaq
+    cout << "Area of Room =  " << room1.calculateArea() << endl;
+    cout << "Volume of Room =  " << room1.calculateVolume() << endl;
+
+    return 0;
+}
+```
+---
+**Shembull shtese - 2:**
+```cpp
+// Duke perdorur public dhe private
+
+#include <iostream>
+using namespace std;
+
+class Room {
+
+   private:
+    double length;
+    double breadth;
+    double height;
+
+   public:
+
+    // funksioni qe inicializon variablat private
+    void initData(double len, double brth, double hgt) {
+        length = len;
+        breadth = brth;
+        height = hgt;
+    }
+
+    double calculateArea() {
+        return length * breadth;
+    }
+
+    double calculateVolume() {
+        return length * breadth * height;
+    }
+};
+
+int main() {
+
+    Room room1;
+
+    // jep vlere variablave private si argumente
+    room1.initData(42.5, 30.8, 19.2);
+
+    cout << "Area of Room =  " << room1.calculateArea() << endl;
+    cout << "Volume of Room =  " << room1.calculateVolume() << endl;
+
+    return 0;
+}
+```
