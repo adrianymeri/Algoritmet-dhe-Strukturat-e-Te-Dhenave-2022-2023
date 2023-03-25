@@ -272,7 +272,6 @@ int *x = v1, *y = v2;
 int **z = &(*x > *y ? x : y);
 cout << 2 * *(*z + 1);
 ```
-
 ---
 
 <!-- .slide: style="font-size:0.8em;" -->
