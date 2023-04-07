@@ -1,7 +1,7 @@
 ## Algoritmet dhe Strukturat e të Dhënave – Java 6
 
 
-## Detyra 1: Te shkruhet programi qe kalkulon shumen e numrave te ruajtura ne Stack
+# Detyra 1: Te shkruhet programi qe kalkulon shumen e numrave te ruajtura ne Stack
 
 ```cpp
 #include <iostream> 
