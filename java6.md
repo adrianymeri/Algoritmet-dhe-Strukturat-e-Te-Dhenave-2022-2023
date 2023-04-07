@@ -1,7 +1,7 @@
 ## Algoritmet dhe Strukturat e të Dhënave – Java 6
 
 
-** Detyra 1:** Te shkruhet programi qe kalkulon shumen e numrave te ruajtura ne Stack
+**Detyra 1:** Te shkruhet programi qe kalkulon shumen e numrave te ruajtura ne Stack
 
 ```cpp
 #include <iostream> 
@@ -28,3 +28,26 @@ return 0;
 }
 ```
 ---
+**Detyra 2:**
+
+```cpp
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<string> languages;
+    
+    // add element to the Stack
+    languages.push("C++");
+    languages.push("Java");
+    languages.push("Python");
+    
+    cout << languages.top();
+
+    return 0;
+}
+```
+---
+
+
