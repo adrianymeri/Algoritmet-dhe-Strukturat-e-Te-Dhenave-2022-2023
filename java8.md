@@ -2,7 +2,6 @@
 
 **Detyra 1:**
 ```cpp
-// C++ program to demonstrate the use of list containers
 #include <iostream>
 #include <list>
 using namespace std;
@@ -17,11 +16,70 @@ int main()
 	}
 	return 0;
 }
-
 ```
 ---
 
 **Detyra 2:**
+```cpp
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main() {
+
+    // create a list
+    list<int> numbers = {1, 2, 3, 4, 5};
+  
+    // display the first element
+    cout << "First Element: " << numbers.front() << endl;
+  
+    // display the last element
+    cout << "Last Element: " << numbers.back();
+  
+    return 0;
+}
+```
+---
+
+**Detyra 3:**
+```cpp
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main() {
+    
+    // create a list
+    list<int> numbers = {1, 2, 3};
+  
+    // display the original list 
+    cout << "Initial List: ";
+    for(int number: numbers) {
+        cout << number << ", ";
+    }
+  
+    // add element at the beginning
+    numbers.push_front(0);
+
+    // add element at the end
+    numbers.push_back(4);
+
+    // display the modified list
+    cout << endl << "Final List: ";
+    for(int number : numbers) {
+        cout << number << ", ";
+    }
+
+  return 0;
+
+}
+
+```
+---
+
+**Detyra 4:**
 ```cpp
 #include <iostream>
 #include <list>
@@ -45,7 +103,7 @@ int main() {
 ```
 ---
 
-**Detyra 3:**
+**Detyra 5:**
 ```cpp
 #include <iostream>
 #include <list>
@@ -78,9 +136,8 @@ int main() {
 ```
 ---
 
-**Detyra 4:**
+**Detyra 6:**
 ```cpp
-// C++ program to demonstrate the implementation of List
 #include <iostream>
 #include <iterator>
 #include <list>
@@ -95,7 +152,6 @@ void showlist(list<int> g)
 	cout << '\n';
 }
 
-// Driver Code
 int main()
 {
 
@@ -135,7 +191,7 @@ int main()
 ```
 ---
 
-**Detyra 5:**
+**Detyra 7:**
 ```cpp
 #include <iostream>
 #include <list>
