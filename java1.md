@@ -7,75 +7,60 @@
 Supozojmë një strukturë të të dhënave `Pika` e cila paraqet dyshen `(x,y)` në rrafshin kartezian:
 
 ```cpp
+#include <iostream>
+#include <math.h>
+#include <sstream>
+using namespace std;
+
 struct Pika {
   double x;
   double y;
+  
+  bool baraz(Pika p) {
+    return x == p.x && y == p.y;
+  }
+
+  double distanca(Pika p) {
+    return sqrt(
+      pow(x - p.x, 2) + pow(y - p.y, 2)
+    );
+  }
+
+  double distanca_nga_qendra() {
+    return sqrt(pow(x, 2) + pow(y, 2));
+  }
+
+  string toString() {
+    stringstream ss;
+    ss << "(" << x << ", " << y << ")";
+    return ss.str();
+  }
+
+  Pika konstrukto(double x, double y) {
+    Pika p = { x, y };
+    return p;
+  }
 };
-```
 
----
+int main() {
+  Pika p1, p2;
+  p1 = p1.konstrukto(6.0, 3.5);
+  p2 = p2.konstrukto(4.2, 7.1);
 
-Shpesh kemi funksione të cilat ndërveprojnë me këtë strukturë:
-
-```cpp
-bool baraz(Pika p1, Pika p2) {
-  return p1.x == p2.x && p1.y == p2.y;
-}
-```
-
----
-
-```cpp
-double distanca(Pika p1, Pika p2) {
-  return sqrt(
-    pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2)
-  );
-}
-```
-
----
-
-```cpp
-double distanca_nga_qendra(Pika p) {
-  return sqrt(pow(p.x, 2) + pow(p.y, 2));
-}
-```
-
----
-
-```cpp
-string toString(Pika p) {
-  stringstream ss;
-  ss << "(" << p.x << ", " << p.y << ")";
-  return ss.str();
-}
-```
-
----
-
-```cpp
-Pika konstrukto(double x, double y) {
-  Pika p = { x, y };
-  return p;
-}
-```
-
----
-
-```cpp
-Pika p1 = konstrukto(6.0, 3.5);
-Pika p2 = konstrukto(4.2, 7.1);
-
-cout << "Distanca mes pikes p1=" << toString(p1)
-      << " dhe pikes p2=" << toString(p2)
-      << " eshte d=" << distanca(p1, p2)
+  cout << "Distanca mes pikes p1=" << p1.toString()
+      << " dhe pikes p2=" << p2.toString()
+      << " eshte d=" << p1.distanca(p2)
       << endl;
 
-if (baraz(p1, p2)) {
-  cout << "Pikat jane te barabarta.";
-} else {
-  cout << "Pikat jane te ndryshme.";
+  if (p1.baraz(p2)) {
+    cout << "Pikat jane te barabarta.";
+  } else {
+    cout << "Pikat jane te ndryshme.";
+  }
+
+  return 0;
 }
+
 ```
 
 ---
