@@ -98,7 +98,7 @@ void display_stack(stack<string> st) {
 ```
 ---
 
-**Detyra 3:**
+**Detyra 4:**
 
 ```cpp
 #include <iostream>
